@@ -67,15 +67,23 @@ These templates are designed to work together as a complete development workflow
 
 ## Examples
 
-See a real-world implementation in the [examples/claude.md](examples/claude.md) file, which demonstrates:
+The `examples/` directory demonstrates the complete PRD → SPEC → CLAUDE workflow using real-world projects:
 
-- How to document a Next.js application with detailed tech stack
-- Comprehensive command reference for development workflows
-- Architecture overview with directory structure
-- Code style guidelines and boundaries for AI assistants
-- Platform-specific notes and gotchas
+### Smart Task Search Project (PRD & SPEC)
+- **[examples/prd.md](examples/prd.md)** - Product Requirements Document showing how to define a feature (smart task search with natural language)
+- **[examples/spec.md](examples/spec.md)** - Technical Specification translating those requirements into implementation details
 
-This example shows how CLAUDE-TEMPLATE.md becomes a living document that helps both humans and AI understand project context quickly.
+These two examples work together to show how product vision flows into technical design for the same feature.
+
+### Corrector Project (CLAUDE.md)
+- **[examples/claude.md](examples/claude.md)** - AI assistant guide for a Next.js application demonstrating:
+  - How to document a tech stack with detailed context
+  - Comprehensive command reference for development workflows
+  - Architecture overview with directory structure
+  - Code style guidelines and boundaries for AI assistants
+  - Platform-specific notes and gotchas
+
+Together, these examples show how the templates become living documents that help both humans and AI understand project context quickly.
 
 ## Best Practices
 
@@ -106,7 +114,9 @@ templates/
 ├── PRD-TEMPLATE.md       # Product requirements document template
 ├── SPEC-TEMPLATE.md      # Technical specification template
 ├── examples/
-│   └── claude.md         # Real-world CLAUDE.md example (Next.js project)
+│   ├── prd.md            # PRD example: Smart Task Search feature
+│   ├── spec.md           # SPEC example: Smart Task Search implementation
+│   └── claude.md         # CLAUDE.md example (Corrector project)
 ├── commands/             # Reserved for future: reusable AI command snippets
 ├── skills/               # Reserved for future: specialized AI skill modules
 └── README.md             # You are here
