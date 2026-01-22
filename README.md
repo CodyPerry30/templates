@@ -8,9 +8,9 @@ This repository provides three comprehensive document templates designed to brid
 
 | Template | Purpose | Key Contents | Best For |
 |----------|---------|--------------|----------|
-| [**PRD-TEMPLATE.md**](PRD-TEMPLATE.md) | Product Requirements Document | Problem statement, user personas, success metrics, scope definition, risks | Product managers, stakeholders defining what to build and why |
-| [**SPEC-TEMPLATE.md**](SPEC-TEMPLATE.md) | Technical Specification | Data models, API contracts, functional requirements, testing criteria, code standards | Engineers and architects designing how to build it |
-| [**CLAUDE-TEMPLATE.md**](CLAUDE-TEMPLATE.md) | AI Assistant Project Guide | Tech stack, commands, architecture, code style, boundaries, workflows | AI assistants (Claude, Cursor, etc.) and developers needing quick project context |
+| [**PRD-TEMPLATE.md**](templates/PRD-TEMPLATE.md) | Product Requirements Document | Problem statement, user personas, success metrics, scope definition, risks | Product managers, stakeholders defining what to build and why |
+| [**SPEC-TEMPLATE.md**](templates/SPEC-TEMPLATE.md) | Technical Specification | Data models, API contracts, functional requirements, testing criteria, code standards | Engineers and architects designing how to build it |
+| [**CLAUDE-TEMPLATE.md**](templates/CLAUDE-TEMPLATE.md) | AI Assistant Project Guide | Tech stack, commands, architecture, code style, boundaries, workflows | AI assistants (Claude, Cursor, etc.) and developers needing quick project context |
 
 ## Quick Start
 
@@ -110,20 +110,23 @@ Together, these examples show how the templates become living documents that hel
 
 ```
 templates/
-├── CLAUDE-TEMPLATE.md    # AI assistant project guide template
-├── PRD-TEMPLATE.md       # Product requirements document template
-├── SPEC-TEMPLATE.md      # Technical specification template
+├── README.md             # You are here
 ├── examples/
 │   ├── prd.md            # PRD example: Smart Task Search feature
 │   ├── spec.md           # SPEC example: Smart Task Search implementation
 │   └── claude.md         # CLAUDE.md example (Corrector project)
+├── templates/
+│   ├── CLAUDE-TEMPLATE.md    # AI assistant project guide template
+│   ├── PRD-TEMPLATE.md       # Product requirements document template
+│   └── SPEC-TEMPLATE.md      # Technical specification template
+├── agents/               # Reserved for future: specialized sub-agents
 ├── commands/             # Reserved for future: reusable AI command snippets
-├── skills/               # Reserved for future: specialized AI skill modules
-└── README.md             # You are here
+└── skills/               # Reserved for future: specialized AI skill modules
 ```
 
 ### Reserved Directories
 
+- **`agents/`**: Planned for specialized sub-agents that can be invoked for specific workflows or domains
 - **`commands/`**: Planned for reusable command definitions that can be referenced across projects
 - **`skills/`**: Planned for specialized AI skill modules (e.g., testing workflows, deployment procedures)
 
