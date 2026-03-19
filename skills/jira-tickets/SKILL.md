@@ -2,14 +2,13 @@
 name: jira-tickets
 description: Analyze a conversation or task list and create well-structured JIRA tickets via the Atlassian MCP server. Supports Story/Sub-task hierarchy, BDD acceptance criteria, story points, and preview-before-create workflow. All tickets are created in the backlog — epic assignment is handled by the PM.
 invocation: jira-tickets
-argument-hint: [project-key (S2, ESG)] [Paste a task list, describe a feature, or point me at something earlier in the conversation.]
+argument-hint: [project-key (ESG)] [Paste a task list, describe a feature, or point me at something earlier in the conversation.]
 arguments:
   - name: project-key
-    description: JIRA project key (e.g. S2). Defaults to S2 if omitted.
+    description: JIRA project key (e.g. ESG). Defaults to ESG if omitted.
     required: true
   - description: Paste a task list, describe a feature, or point me at something earlier in the conversation.
     required: true
-
 user-invocable: true
 ---
 
@@ -25,9 +24,9 @@ Break down a conversation, task list, or planning doc into well-structured JIRA 
 
 `/jira-tickets [project-key]`
 
-Example: `/jira-tickets S2`
+Example: `/jira-tickets ESG`
 
-Default project: **S2** (Sustainability Solutions ESG) — used when no `project-key` argument is supplied.
+Default project: **ESG** — used when no `project-key` argument is supplied.
 
 ---
 
@@ -41,9 +40,9 @@ Run both of these in parallel before any other work:
    - If `project-key` argument was supplied → use it directly, no prompt needed.
    - If `project-key` was NOT supplied → ask the user:
 
-     > "Which JIRA project should I create these tickets in? (default: **S2** — Sustainability Solutions ESG)"
+     > "Which JIRA project should I create these tickets in? (default: **ESG**)"
 
-     Wait for the user's response. If they reply with just "yes", "ok", or press enter with no key, use **S2**.
+     Wait for the user's response. If they reply with just "yes", "ok", or press enter with no key, use **ESG**.
 
 2. **Resolve the current user** — call `atlassianUserInfo` to get the invoking user's Atlassian account ID.
    - Extract the `account_id` field from the response (it is a long alphanumeric string, e.g. `62b1ded1cebad33432f6f32e`).
@@ -182,8 +181,8 @@ Execute in dependency order:
 
 | Key | Type | Summary | Points |
 |-----|------|---------|--------|
-| S2-102 | Story | DDC: ... | 3 |
-| S2-103 | Sub-task | DDC: ... | 1 |
+| ESG-102 | Story | DDC: ... | 3 |
+| ESG-103 | Sub-task | DDC: ... | 1 |
 ```
 
 ---
